@@ -219,7 +219,7 @@ const MyBody = () => {
                 ]}
               />
 
-              <h5 className="section-title my-3">Altro da esplorare</h5>
+              <h5 className="section-title my-3 ms-2">Altro da esplorare</h5>
               <Row className="g-3 explore-row">
                 {exploreButtons.map((label, idx) => (
                   <Col xs={12} md={12} lg={4} key={idx}>
