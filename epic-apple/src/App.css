@@ -4,9 +4,6 @@
 .hero {
   background-color: rgb(31, 31, 31) !important;
 }
-.icona {
-  color: red;
-}
 
 .playerbar {
   background-color: rgb(44, 44, 44);
@@ -99,5 +96,35 @@
 }
 
 .card-senza-bordo {
-  border: none !important;
+  border: none !important; /* toglie bordo */
+  background: transparent; /* rimuove eventuale sfondo */
+}
+
+.card-senza-bordo .episode-img {
+  width: 100%;
+  height: 200px; /* imposta un’altezza fissa */
+  object-fit: cover; /* riempie mantenendo proporzioni */
+  display: block;
+  border-radius: 0; /* elimina bordi stondati se non servono */
+}
+.card-senza-bordo .episode-img {
+  width: 100%;
+  height: 200px; /* imposta un’altezza fissa */
+  object-fit: cover; /* riempie mantenendo proporzioni */
+  display: block;
+  border-radius: 0; /* elimina bordi stondati se non servono */
+}
+.card-senza-bordo .card-title,
+.card-senza-bordo .card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* per una riga sola */
+}
+
+/* Se preferisci multi-riga */
+.card-senza-bordo .card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* numero massimo di righe */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

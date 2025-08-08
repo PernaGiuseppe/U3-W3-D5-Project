@@ -49,9 +49,11 @@ const MyBody = () => {
                     style={{ backgroundColor: 'red' }}
                   />
 
-                  <div className="d-none d-md-flex d-lg-none align-items-center justify-content-center flex-grow-1 position-relative">
+                  <div className="d-none d-md-flex d-sm-flex d-lg-none align-items-center justify-content-center flex-grow-1 position-relative me-sm-3">
                     <img src="/assets/logos/apple.svg" alt="apple-logo" />
-                    <h4 className="text-white ms-2 mb-0">Music</h4>
+                    <h4 className="text-white ms-2 mb-0 me-sm-3 me-md-3">
+                      Music
+                    </h4>
 
                     <Button
                       variant="outline-danger"
@@ -70,7 +72,7 @@ const MyBody = () => {
                       <Col xs="auto" className="w-100">
                         <InputGroup className="bg-black text-white">
                           <InputGroup.Text className="bg-black text-white border-0">
-                            <FaSearch className="icona" />
+                            <FaSearch className="icona myred" />
                           </InputGroup.Text>
                           <Form.Control
                             type="text"
@@ -83,14 +85,15 @@ const MyBody = () => {
                   </Form>
 
                   <Nav className="flex-column w-100">
-                    <Nav.Link href="#">
-                      <FaHouseChimney className="me-2 icona" /> Home
+                    <Nav.Link href="#" className="text-light">
+                      <FaHouseChimney className="me-2 icona myred" /> Home
                     </Nav.Link>
-                    <Nav.Link href="#">
-                      <HiOutlineSquares2X2 className="me-2 icona" /> Novità
+                    <Nav.Link href="#" className="text-light">
+                      <HiOutlineSquares2X2 className="me-2 icona myred" />{' '}
+                      Novità
                     </Nav.Link>
-                    <Nav.Link href="#">
-                      <IoIosRadio className="me-2 icona" /> Radio
+                    <Nav.Link href="#" className="text-light">
+                      <IoIosRadio className="me-2 icona myred" /> Radio
                     </Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
@@ -146,12 +149,12 @@ const MyBody = () => {
             </div>
 
             <Container fluid className="p-3 hero text-light">
-              <h2 className="mb-2">Novità</h2>
+              <h2 className="mb-2 ms-2">Novità</h2>
 
               <Row className="g-3">
                 <Col md={6} className="d-flex">
                   <Card className="banner-card flex-fill d-flex flex-column w-100 card-senza-bordo">
-                    <Card.Body className="flex-grow-1">
+                    <Card.Body className="flex-grow-1 hero text-light">
                       <small>NUOVA STAZIONE RADIO</small>
                       <p>
                         Rilassati, al resto pensiamo noi. Ascolta Apple Music
@@ -170,7 +173,7 @@ const MyBody = () => {
 
                 <Col md={6} className="d-flex">
                   <Card className="banner-card flex-fill d-flex flex-column w-100 card-senza-bordo">
-                    <Card.Body className="flex-grow-1">
+                    <Card.Body className="flex-grow-1 hero text-light">
                       <small>NUOVA STAZIONE RADIO</small>
                       <p>Ecco la nuova casa della musica latina</p>
                     </Card.Body>
@@ -182,7 +185,7 @@ const MyBody = () => {
                 </Col>
               </Row>
 
-              <h5 className="section-title my-3">
+              <h5 className="section-title my-3 ms-2">
                 Nuovi episodi radio <MdArrowForwardIos />
               </h5>
               <Row xs={1} sm={2} md={3} xl={5} className="g-4">
@@ -195,7 +198,7 @@ const MyBody = () => {
                         alt={episode.title}
                         className="episode-img"
                       />
-                      <Card.Body className="d-flex flex-column">
+                      <Card.Body className="d-flex flex-column hero text-light">
                         <Card.Title className="flex-grow-1">
                           {episode.title}
                         </Card.Title>
@@ -205,7 +208,7 @@ const MyBody = () => {
                 ))}
               </Row>
 
-              <h5 className="section-title my-3">Nuove uscite</h5>
+              <h5 className="section-title my-3 ms-2">Nuove uscite</h5>
               <SearchCards
                 searchTerms={[
                   'queen',
